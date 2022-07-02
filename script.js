@@ -1,3 +1,4 @@
+
 //timer function was pretty simple. had a bit of trouble with the m/d/y format but was able to figure it out through experimentation. 
 var showDay = $('#currentDay');
 
