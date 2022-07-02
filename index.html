@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--adding bootstrap+jquery CSS right away, unsure of what I will use yet but can always remove later.-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,7 +27,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="custom.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -31,8 +40,74 @@
     <div class="container">
       <!-- Timeblocks go here -->
     </div>
-
+    <table class="table custom-size table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">To Do</th>
+          <th scope="col">Complete?</th>
+          <th scope="col">Save</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-warning table-bordered">
+          <th scope="row">9 AM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-warning table-bordered">
+          <th scope="row">10 AM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-info table-bordered">
+          <th scope="row">11 AM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-info table-bordered">
+          <th scope="row">12 PM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-info table-bordered">
+          <th scope="row">1 PM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-success table-bordered">
+          <th scope="row">2 PM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-success table-bordered">
+          <th scope="row">3 PM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-danger table-bordered">
+          <th scope="row">4 PM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="table-dark table-bordered">
+          <th scope="row">5 PM</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
