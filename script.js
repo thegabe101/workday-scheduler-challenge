@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
 //TODO: figure out way for colors to correspond with current time 
 //initial attempt unsuccessful
 
@@ -37,70 +37,23 @@ displayTime();
 //TODO: 4. create a clear field button 
 //TODO: 5. create a submit button that accepts the first function
 //TODO: 6. local storage 
-
-
-// function rowColor() {
-//   var timeBlockElements = $('.hour');
-//   console.log(timeBlockElements);
-//   var d = new Date();
-//   var now = d.getUTCHours() - 8;
-//   console.log(now);
-//   var before = d.getUTCHours() +8;
-//   console.log(before);
-//   console.log(d);
-//   for (var i = 0 ; i < timeBlockElements.length ; i++)
-//   if (d > before) {
-//       $(".hour").addClass("past").removeClass("future");
-//   } else  {
-      
-//       $(".hour").addClass("future").removeClass("past");
-//   }
-  
-// }
-// rowColor();
-
-
-//
-
-
-
-// var workToDoInputEl = $('.hour')
-// var workNotesEl = $('#workNotes')
-// var saveButton = $('.svBtn')
-// var projectModalEl = $('.project-modal');
-// var projectDisplayEl = $('.project-display')
-
-// function addProjectData(todo, notes) {
-//   var rowEl = $('#toDo');
-
-//   var toDoEl = $('<td>').text(todo);
-
-//   var notesEl = $('<td>').text(notes);
-
-//   rowEl.append(
-//       toDoEl,
-//       notesEl
-//   )
-//   projectDisplayEl.append(rowEl);
-
-
-// }
-function hourTracker() {
-
-  var currentHour = moment().hour(); 
-
   
   $(".rowTime").each(function () {
-      var blockHour = parseInt($(this).attr("id").split("hour")[1]);
-      console.log( blockHour, currentHour)
+      var rowHour = parseInt($(this).attr("id").split("hour")[1]);
+      var currentHour = moment().hour(); 
+      //for (var i = 0; i < rowHour.length; i++)
+      //this line took me awhile to get. parseInt + this and adding the attribute of id and splitting it enables us to parse all of the divs with the id of hour by 1. this way we are able to divide them into blocks that level consistently and apply a correct value to in the if/else rule. 
+      console.log(rowHour, currentHour)
+      console.log(typeof rowHour)
+      console.log(this)
 
       
-      if (blockHour < currentHour) {
+      if (rowHour < currentHour) {
           $('.table-bordered').addClass("past");
           $('.table-bordered').removeClass("future");
           $('.table-bordered').removeClass("present");
       }
-      else if (blockHour === currentHour) {
+      else if (rowHour === currentHour) {
           $('.table-bordered').removeClass("past");
           $('.table-bordered').addClass("present");
           $('.table-bordered').removeClass("future");
@@ -111,38 +64,7 @@ function hourTracker() {
           $('.table-bordered').addClass("future");
       }
   })
-}
-hourTracker(); 
-})
 
 
 
-// function saveStuff (event) {
-//   event.preventDefault();
 
-//   var toDo = workToDoInputEl.val().trim();
-//   var workNotes = workNotesEl.val().trim();
-
-//   addProjectData(toDo, workNotes);
-
-// }
-
-// saveButton.on('click', saveStuff);
-
-
-  // $(".svBtn").on("click", function () {
-  // console.log("clicked");
-  //     var toDoText = toDoInputEl.val();
-  //     var workNotesText = workNotesInputEl.val();
-  //     localStorage.setItem(toDoText, workNotesText);
-  // })
-
-  // $(".hour9 #toDo #workNotes").val(localStorage.getItem("hour9"));
-  // $(".hour10 #toDo #workNotes").val(localStorage.getItem("hour10"));
-  // $(".hour11 #toDo #workNotes").val(localStorage.getItem("hour11"));
-  // $(".hour12 #toDo #workNotes").val(localStorage.getItem("hour12"));
-  // $(".hour13 #toDo #workNotes").val(localStorage.getItem("hour13"));
-  // $(".hour14 #toDo #workNotes").val(localStorage.getItem("hour14"));
-  // $(".hour15 #toDo #workNotes").val(localStorage.getItem("hour15"));
-  // $(".hour16 #toDo #workNotes").val(localStorage.getItem("hour16"));
-  // $(".hour17 #toDo #workNotes").val(localStorage.getItem("hour17"));
