@@ -149,11 +149,34 @@ textarea{
   background: lightcyan;
   transition: border .3s ease;
   }
-  &:focus {
+  :focus {
       outline: none;
       border-color: black;
   }
 
+
+  /* .themeDay {
+    background-color: darkblue;
+  }
+
+  .themeNight {
+    background-color: #000000;
+  } */
+
+
+  .past {
+    background-color: gray;
+  }
+
+
+  .future {
+    background-color: #06AED5;
+  }
+
+
+  .present {
+    background-color: #77dd77;
+  }
 
 @media (min-width: 768px) {
   .svBtn {
@@ -161,3 +184,4 @@ textarea{
     font-size: 1.25rem;
   }
 }
+
