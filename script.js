@@ -49,22 +49,39 @@ displayTime();
 
       
       if (rowHour < currentHour) {
-          $('.table-bordered').addClass("past");
-          $('.table-bordered').removeClass("future");
-          $('.table-bordered').removeClass("present");
+          $(this).addClass("past");
+          $(this).removeClass("future");
+          $(this).removeClass("present");
       }
       else if (rowHour === currentHour) {
-          $('.table-bordered').removeClass("past");
-          $('.table-bordered').addClass("present");
-          $('.table-bordered').removeClass("future");
+          $(this).removeClass("past");
+          $(this).addClass("present");
+          $(this).removeClass("future");
       }
       else {
-          $('.table-bordered').removeClass("present");
-          $('.table-bordered').removeClass("past");
-          $('.table-bordered').addClass("future");
+          $(this).removeClass("present");
+          $(this).removeClass("past");
+          $(this).addClass("future");
       }
   })
 
+//   $(".svBtn").click(function (event) {
+//     event.preventDefault();
+//     var value = $(this).siblings(".rowTime").val();
+//     var time = $(this).parent().attr("id").split("-")[1];
+//     localStorage.setItem(time, value);
+//   });
+
+//   //retrieves items from local storage and sets them in proper places
+//   $("#hour-09 .form-field").val(localStorage.getItem("09"));
+//   $("#hour-10 .form-field").val(localStorage.getItem("10"));
+//   $("#hour-11 .form-field").val(localStorage.getItem("11"));
+//   $("#hour-12 .form-field").val(localStorage.getItem("12"));
+//   $("#hour-13 .form-field").val(localStorage.getItem("13"));
+//   $("#hour-14 .form-field").val(localStorage.getItem("14"));
+//   $("#hour-15 .form-field").val(localStorage.getItem("15"));
+//   $("#hour-16 .form-field").val(localStorage.getItem("16"));
+//   $("#hour-17 .form-field").val(localStorage.getItem("17"));
 
 
 
