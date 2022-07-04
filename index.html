@@ -37,12 +37,11 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+    <div class="container"></div>
     <table
       class="table custom-size table-bordered project-modal project-display"
     >
+      <!--initially created a div for each one of these table rows, which turned out to overcomplicated their targeting in the script-->
       <thead>
         <tr>
           <th scope="col" class="custom-width">Time</th>
@@ -52,6 +51,7 @@
         </tr>
       </thead>
       <tbody>
+        <!--the sheer quantity of classes and id's in these rows was new to me and rather unwieldy. this was a great learning experience on multi-class elements and how to work with them-->
         <tr id="hour9" class="table-bordered rowTime hour">
           <th scope="row">9 AM</th>
           <td><input type="text" class="form-field" id="toDo" /></td>

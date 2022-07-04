@@ -46,7 +46,7 @@ displayTime();
       console.log(rowHour, currentHour)
       console.log(typeof rowHour)
       console.log(this)
-
+        //breakthrough here came when I logged this. I was initially putting .table-border as the class to alter in the logic below but that would not have been targeting the parsed integerers of each row. 
       
       if (rowHour < currentHour) {
           $(this).addClass("past");
@@ -65,23 +65,17 @@ displayTime();
       }
   })
 
-//   $(".svBtn").click(function (event) {
-//     event.preventDefault();
-//     var value = $(this).siblings(".rowTime").val();
-//     var time = $(this).parent().attr("id").split("-")[1];
-//     localStorage.setItem(time, value);
-//   });
-
-//   //retrieves items from local storage and sets them in proper places
-//   $("#hour-09 .form-field").val(localStorage.getItem("09"));
-//   $("#hour-10 .form-field").val(localStorage.getItem("10"));
-//   $("#hour-11 .form-field").val(localStorage.getItem("11"));
-//   $("#hour-12 .form-field").val(localStorage.getItem("12"));
-//   $("#hour-13 .form-field").val(localStorage.getItem("13"));
-//   $("#hour-14 .form-field").val(localStorage.getItem("14"));
-//   $("#hour-15 .form-field").val(localStorage.getItem("15"));
-//   $("#hour-16 .form-field").val(localStorage.getItem("16"));
-//   $("#hour-17 .form-field").val(localStorage.getItem("17"));
-
+//now to figure out local storage + tying to button
+//   console.log(localStorage);
+//   localStorage.setItem("toDo", "9 o'clock meeting");
+  //key value+item successfully logs storage. how to tie to an ID.
+// localStorage.removeItem("toDo");
+// console.log(localStorage);
+// localStorage.setItem("workNotes", "this project is hard");
+// localStorage.setItem("toDo", "9 o'clock meeting");
+// console.log(localStorage.getItem("toDo"));
+//JS seems to like making a number into a string no matter how I write the local storage key, something to keep in mind.
+// console.log(localStorage.key(1)); 
+//this was just messing around w local storage; going to comment this out and actually try to create the function now. 
 
 
