@@ -113,10 +113,16 @@ displayTime();
 
 var inputValueBox1 = document.getElementById("toDo");
 var inputValueBox2 = document.getElementById("workNotes");
-var svBtn = document.getElementsByClassName("svBtn");
+var svBtn = document.getElementsByClassName(".svBtn");
+
+console.log(svBtn);
+
+svBtn.addEventListener("click", saveData);
+console.log("hello");
 
 
-svBtn.onclick = function () {
+function saveData () {
+console.log("clicked");
 var inputvalue1 = inputValueBox1.value
 var inputvalue2 = inputValueBox2.value
 
