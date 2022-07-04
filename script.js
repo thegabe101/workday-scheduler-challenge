@@ -79,3 +79,34 @@ displayTime();
 //this was just messing around w local storage; going to comment this out and actually try to create the function now. 
 
 
+const toDoInputEl = document.getElementById ("toDo");
+const workNotesInputEl = document.getElementById ("workNotes");
+const svBtn = document.getElementById ("svBtn");
+const formField = document.getElementsByClassName("form-field")
+
+svBtn.onclick = function () {
+    const key = toDoInputEl.value;
+    const value = toDoInputEl.value;
+    const key1 = workNotesInputEl.value;
+    const value1 =workNotesInputEl.value;
+
+    console.log(key);
+    console.log(value);
+    console.log(key1);
+    console.log(value1);
+
+    if (key && value) {
+      localStorage.setItem(key, value);
+    }
+    if (key1 && value1) {
+      localStorage.setItem(key1, value1);
+    }
+  }
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i)
+      const value = localStorage.getItem(key);
+
+      formField.innerHTML += `${key}: ${value}`;
+};
+
+//initial attempt at local storage not working. i am really confused as to how to save two different input fields into local storage. 

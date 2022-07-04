@@ -90,7 +90,7 @@ textarea{
   width:5%;
 }
 
-.svBtn {
+#svBtn {
   background-color: #e79b3dc6;
   border: 0 solid #E5E7EB;
   box-sizing: border-box;
@@ -115,11 +115,11 @@ textarea{
   touch-action: manipulation;
 }
 
-.svBtn:focus {
+#svBtn:focus {
   outline: 0;
 }
 
-.svBtn:after {
+#svBtn:after {
   content: '';
   position: absolute;
   border: 1px solid #000000;
@@ -129,7 +129,7 @@ textarea{
   height: calc(100% - 1px);
 }
 
-.svBtn:hover:after {
+#svBtn:hover:after {
   bottom: 2px;
   left: 2px;
 }
