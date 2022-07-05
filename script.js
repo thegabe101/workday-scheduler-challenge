@@ -128,13 +128,18 @@ console.log("clicked");
 
 })
 
-for (var i = 0 ; i < inputValueBox1.length; i++) {
-  saveData();
+
+for (let i = 0; i < localStorage.length; i++) {
+  console.log(localStorage.key(i))
 }
 
-for (var i = 0 ; i < inputValueBox2.length; i++) {
-  saveData();
-}
+// for (var i = 0 ; i < inputValueBox1.length; i++) {
+//   saveData();
+// }
+
+// for (var i = 0 ; i < inputValueBox2.length; i++) {
+//   saveData();
+// }
 
 $("#hour9 #toDo").val(localStorage.getItem("toDo"));
 $("#hour9 #workNotes").val(localStorage.getItem("workNotes"));
