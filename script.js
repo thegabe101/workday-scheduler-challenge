@@ -111,27 +111,27 @@ displayTime();
 
 //initial attempt at local storage not working. i am really confused as to how to save two different input fields into local storage. 
 
-var inputValueBox1 = document.getElementById("toDo");
-var inputValueBox2 = document.getElementById("workNotes");
+// var inputValueBox1 = document.getElementById("toDo");
+// var inputValueBox2 = document.getElementById("workNotes");
 
-$('.svBtn').on('click', function saveData () {
-console.log("clicked");
-var inputvalue1 = inputValueBox1.value
-var inputvalue2 = inputValueBox2.value
+// $('.svBtn').on('click', function saveData () {
+// console.log("clicked");
+// var inputvalue1 = inputValueBox1.value
+// var inputvalue2 = inputValueBox2.value
 
-localStorage.setItem("toDo", inputvalue1);
-localStorage.setItem("workNotes", inputvalue2);
+// localStorage.setItem("toDo", inputvalue1);
+// localStorage.setItem("workNotes", inputvalue2);
 
-console.log(inputvalue1);
-console.log(inputvalue2);
-console.log("clicked");
+// console.log(inputvalue1);
+// console.log(inputvalue2);
+// console.log("clicked");
 
-})
+// })
+// add for loop to add on click event for each hour block. each event will store to a different key. 
 
-
-for (let i = 0; i < localStorage.length; i++) {
-  console.log(localStorage.key(i))
-}
+// for (let i = 0; i < localStorage.length; i++) {
+//   console.log(localStorage.key(i))
+// }
 
 // for (var i = 0 ; i < inputValueBox1.length; i++) {
 //   saveData();
@@ -141,21 +141,135 @@ for (let i = 0; i < localStorage.length; i++) {
 //   saveData();
 // }
 
-$("#hour9 #toDo").val(localStorage.getItem("toDo"));
-$("#hour9 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour10 #toDo").val(localStorage.getItem("toDo"));
-$("#hour10 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour11 #toDo").val(localStorage.getItem("toDo"));
-$("#hour11 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour12 #toDo").val(localStorage.getItem("toDo"));
-$("#hour12 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour13 #toDo").val(localStorage.getItem("toDo"));
-$("#hour13 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour14 #toDo").val(localStorage.getItem("toDo"));
-$("#hour14 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour15 #toDo").val(localStorage.getItem("toDo"));
-$("#hour15 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour16 #toDo").val(localStorage.getItem("toDo"));
-$("#hour16 #workNotes").val(localStorage.getItem("workNotes"));
-$("#hour17 #toDo").val(localStorage.getItem("toDo"));
-$("#hour17 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour9 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour9 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour10 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour10 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour11 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour11 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour12 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour12 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour13 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour13 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour14 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour14 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour15 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour15 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour16 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour16 #workNotes").val(localStorage.getItem("workNotes"));
+// $("#hour17 #toDo").val(localStorage.getItem("toDo"));
+// $("#hour17 #workNotes").val(localStorage.getItem("workNotes"));
+
+// var inputValueBox1 = document.getElementById("toDo-9");
+// var inputValueBox2 = document.getElementById("workNotes-9");
+// var inputvalue1 = inputValueBox1.value
+// var inputvalue2 = inputValueBox2.value
+
+$('#svBtn-1').click(
+  () => {
+    let value = $('#toDo-9').val()
+    let value2 = $('#workNotes-9').val()
+    localStorage.setItem("toDo-9", value)
+    localStorage.setItem("workNotes-9", value2)
+    console.log("clicky1")
+  }
+)
+
+$('#svBtn-2').click(
+  () => {
+    let value = $('#toDo-10').val()
+    let value2 = $('#workNotes-10').val()
+    localStorage.setItem("toDo-10", value)
+    localStorage.setItem("workNotes-10", value2)
+    console.log("clicky2")
+  }
+)
+
+$('#svBtn-3').click(
+  () => {
+    let value = $('#toDo-11').val()
+    let value2 = $('#workNotes-11').val()
+    localStorage.setItem("toDo-11", value)
+    localStorage.setItem("workNotes-11", value2)
+    console.log("clicky3")
+  }
+)
+
+$('#svBtn-4').click(
+  () => {
+    let value = $('#toDo-12').val()
+    let value2 = $('#workNotes-12').val()
+    localStorage.setItem("toDo-12", value)
+    localStorage.setItem("workNotes-12", value2)
+    console.log("clicky4")
+  }
+)
+
+$('#svBtn-5').click(
+  () => {
+    let value = $('#toDo-13').val()
+    let value2 = $('#workNotes-13').val()
+    localStorage.setItem("toDo-13", value)
+    localStorage.setItem("workNotes-13", value2)
+    console.log("clicky5")
+  }
+)
+
+$('#svBtn-6').click(
+  () => {
+    let value = $('#toDo-14').val()
+    let value2 = $('#workNotes-14').val()
+    localStorage.setItem("toDo-14", value)
+    localStorage.setItem("workNotes-14", value2)
+    console.log("clicky6")
+  }
+)
+
+$('#svBtn-7').click(
+  () => {
+    let value = $('#toDo-15').val()
+    let value2 = $('#workNotes-15').val()
+    localStorage.setItem("toDo-15", value)
+    localStorage.setItem("workNotes-15", value2)
+    console.log("clicky7")
+  }
+)
+
+$('#svBtn-8').click(
+  () => {
+    let value = $('#toDo-16').val()
+    let value2 = $('#workNotes-16').val()
+    localStorage.setItem("toDo-16", value)
+    localStorage.setItem("workNotes-16", value2)
+    console.log("clicky8")
+  }
+)
+
+$('#svBtn-9').click(
+  () => {
+    let value = $('#toDo-17').val()
+    let value2 = $('#workNotes-17').val()
+    localStorage.setItem("toDo-17", value)
+    localStorage.setItem("workNotes-17", value2)
+    console.log("clicky9")
+  }
+)
+
+$("#hour9 #toDo-9").val(localStorage.getItem("toDo-9"));
+$("#hour9 #workNotes-9").val(localStorage.getItem("workNotes-9"));
+$("#hour10 #toDo-10").val(localStorage.getItem("toDo-10"));
+$("#hour10 #workNotes-10").val(localStorage.getItem("workNotes-10"));
+$("#hour11 #toDo-11").val(localStorage.getItem("toDo-11"));
+$("#hour11 #workNotes-11").val(localStorage.getItem("workNotes-11"));
+$("#hour12 #toDo-12").val(localStorage.getItem("toDo-12"));
+$("#hour12 #workNotes-12").val(localStorage.getItem("workNotes-12"));
+$("#hour13 #toDo-13").val(localStorage.getItem("toDo-13"));
+$("#hour13 #workNotes-13").val(localStorage.getItem("workNotes-13"));
+$("#hour14 #toDo-14").val(localStorage.getItem("toDo-14"));
+$("#hour14 #workNotes-14").val(localStorage.getItem("workNotes-14"));
+$("#hour15 #toDo-15").val(localStorage.getItem("toDo-15"));
+$("#hour15 #workNotes-15").val(localStorage.getItem("workNotes-15"));
+$("#hour16 #toDo-16").val(localStorage.getItem("toDo-16"));
+$("#hour16 #workNotes-16").val(localStorage.getItem("workNotes-16"));
+$("#hour17 #toDo-17").val(localStorage.getItem("toDo-17"));
+$("#hour17 #workNotes-17").val(localStorage.getItem("workNotes-17"));
