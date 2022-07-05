@@ -1,4 +1,3 @@
-
 //TODO: figure out way for colors to correspond with current time 
 //initial attempt unsuccessful
 
@@ -164,6 +163,12 @@ displayTime();
 // var inputValueBox2 = document.getElementById("workNotes-9");
 // var inputvalue1 = inputValueBox1.value
 // var inputvalue2 = inputValueBox2.value
+
+//due to time pressure and other assignments, had to eventually hardcode in local storage functions. 
+//part of the trick here was i was initially saving my local storage keys to all rows. had to give each one a unique id. 
+//using a for loop would have been much more effective but unsure how to do so with jquery.
+//for now, this is functional, but my plan is to ask the tutor today how i could have done this more effectively (and in far less lineage) with a for loop. 
+//for future sites like this, a clear button is a must. this is another thing to ask tutor about. 
 
 $('#svBtn-1').click(
   () => {
